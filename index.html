@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>City Library</h1>
+
+        <!-- Menu -->
+        <div class="menu">
+            <button onclick="showSection('addBookSection')">Add Book</button>
+            <button onclick="showSection('registerMemberSection')">Register Member</button>
+            <button onclick="showSection('borrowBookSection')">Borrow Book</button>
+            <button onclick="showSection('returnBookSection')">Return Book</button>
+            <button onclick="listBooks()">List Books</button>
+            <button onclick="listMembers()">List Members</button>
+            <button onclick="showSection('findBookSection')">Find Book</button>
+            <button onclick="showSection('checkAvailabilitySection')">Check Book Availability</button>
+        </div>
+
+        <!-- Add Book Section -->
+        <div id="addBookSection" class="section">
+            <h2>Add Book</h2>
+            <label>Title: <input type="text" id="bookTitle"></label><br>
+            <label>Author: <input type="text" id="bookAuthor"></label><br>
+            <label>ISBN: <input type="text" id="bookISBN"></label><br>
+            <label>Publication Year: <input type="text" id="bookYear"></label><br>
+            <button onclick="addBook()">Add Book</button>
+        </div>
+
+        <!-- Register Member Section -->
+        <div id="registerMemberSection" class="section">
+            <h2>Register Member</h2>
+            <label>ID: <input type="text" id="memberId"></label><br>
+            <label>Name: <input type="text" id="memberName"></label><br>
+            <label>Email: <input type="text" id="memberEmail"></label><br>
+            <label>Phone: <input type="text" id="memberPhone"></label><br>
+            <button onclick="registerMember()">Register Member</button>
+        </div>
+
+        <!-- Borrow Book Section -->
+        <div id="borrowBookSection" class="section">
+            <h2>Borrow Book</h2>
+            <label>Member ID: <input type="text" id="borrowMemberId"></label><br>
+            <label>Book Title: <input type="text" id="borrowBookTitle"></label><br>
+            <button onclick="borrowBook()">Borrow Book</button>
+        </div>
+
+        <!-- Return Book Section -->
+        <div id="returnBookSection" class="section">
+            <h2>Return Book</h2>
+            <label>Member ID: <input type="text" id="returnMemberId"></label><br>
+            <label>Book Title: <input type="text" id="returnBookTitle"></label><br>
+            <button onclick="returnBook()">Return Book</button>
+        </div>
+
+        <!-- Find Book Section -->
+        <div id="findBookSection" class="section">
+            <h2>Find Book</h2>
+            <label>Title: <input type="text" id="findBookTitle"></label><br>
+            <button onclick="findBook()">Find Book</button>
+        </div>
+
+        <!-- Check Book Availability Section -->
+        <div id="checkAvailabilitySection" class="section">
+            <h2>Check Book Availability</h2>
+            <label>Title: <input type="text" id="checkBookTitle"></label><br>
+            <button onclick="checkAvailability()">Check Availability</button>
+        </div>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
